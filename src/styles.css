@@ -1,9 +1,9 @@
 :root {
-  --text-color: #6c5b7c;
-  --main-background-color: #f8b595;
-  --individual-div-color: #f67280;
-  --additional-color: #c06c84;
-  --whitish-color: #fafafa;
+  --text-color: #0881a3;
+  --main-background-color: #fffdfb;
+  --individual-div-color: #ffd6a4;
+  --additional-color: #685454;
+  --whitish-color: #fde9df;
 }
 
 /* <uniquifier>: Use a uniquifier for the class name */
@@ -22,12 +22,13 @@ body {
   font-weight: 700;
   font-style: normal;
 }
+
 header {
-  margin-bottom: 10px;
-  padding: 10px;
+  padding: 0;
 }
 
-h1 {
+/*h1 stored inside header */
+header h1 {
   font-size: 40px;
   line-height: 1.5;
   color: var(--text-color);
@@ -41,6 +42,7 @@ form {
   margin-bottom: 30px;
 }
 
+/*target all links */
 a {
   color: var(--text-color);
 }
@@ -80,17 +82,21 @@ footer {
 .container {
   margin: 60px auto;
   max-width: 600px;
+  /*border: 3px solid black;*/
+  padding: 20px;
 }
 
 .contents-section {
   background-color: var(--individual-div-color);
   border-left: 5px solid var(--additional-color);
   box-shadow: 0px 10px 15px #5e280f;
-  border-radius: 10px;
+  border-radius: 3px;
+  color: var(--text-color);
 }
 
 #poem-contents {
   font-size: 18px;
   padding: 12px;
   line-height: 2;
+  padding: 20px 30px;
 }

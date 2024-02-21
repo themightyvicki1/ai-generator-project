@@ -1,3 +1,11 @@
+:root {
+  --text-color: #6c5b7c;
+  --main-background-color: #f8b595;
+  --individual-div-color: #f67280;
+  --additional-color: #c06c84;
+  --whitish-color: #fafafa;
+}
+
 /* <uniquifier>: Use a uniquifier for the class name */
 /* <weight>: Use a value from 300 to 700 */
 /* from google font */
@@ -8,14 +16,81 @@
   font-style: normal;
 }
 
-header {
-  font-size: 26px;
-  color: orange;
-}
-
 body {
-  background-color: aquamarine;
+  background-color: var(--main-background-color);
   font-family: "Comfortaa", sans-serif;
   font-weight: 700;
   font-style: normal;
+}
+header {
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+h1 {
+  font-size: 40px;
+  line-height: 1.5;
+  color: var(--text-color);
+  text-align: center;
+  padding: 10px;
+}
+
+form {
+  padding: 30px;
+  display: flex;
+  margin-bottom: 30px;
+}
+
+a {
+  color: var(--text-color);
+}
+
+footer {
+  text-align: center;
+  font-size: 12px;
+  margin-top: 30px;
+}
+
+.search-bar {
+  width: 80%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  color: var(--text-color);
+  font-size: 18px;
+  background-color: var(--whitish-color);
+}
+
+.submit-button {
+  font-size: 18px;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  margin-left: 10px;
+  color: var(--text-color);
+  background-color: var(--whitish-color);
+}
+
+.submit-button:hover {
+  cursor: pointer;
+  color: var(--whitish-color);
+  background-color: var(--text-color);
+}
+
+.container {
+  margin: 60px auto;
+  max-width: 600px;
+}
+
+.contents-section {
+  background-color: var(--individual-div-color);
+  border-left: 5px solid var(--additional-color);
+  box-shadow: 0px 10px 15px #5e280f;
+  border-radius: 10px;
+}
+
+#poem-contents {
+  font-size: 18px;
+  padding: 12px;
+  line-height: 2;
 }

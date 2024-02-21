@@ -16,18 +16,28 @@
   </head>
   <body>
     <div class="container">
-      <header>AI Generator</header>
+      <header><h1>AI Poem Generator</h1></header>
       <main>
-        <form>
+        <form class="contents-section">
           <input
             type="type"
             placeholder="Enter topic"
             autofocus="on"
             autocomplete="off"
             required
+            class="search-bar"
           />
-          <input type="submit" value="Enter" />
+          <input
+            type="submit"
+            title="Submit"
+            value="Submit"
+            class="submit-button"
+          />
         </form>
+        <div class="contents-section" id="poem-contents">
+          Poem goes here<br />
+          More poem here
+        </div>
       </main>
       <footer>
         <p>

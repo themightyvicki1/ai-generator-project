@@ -102,3 +102,7 @@ footer {
   line-height: 2;
   padding: 20px 30px;
 }
+
+.hidden {
+  display: none;
+}

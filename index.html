@@ -14,6 +14,8 @@
     />
     <!--link for typewriter-->
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <!--link for axios-->
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <title>AI Generator Project</title>
   </head>
   <body>
@@ -29,6 +31,7 @@
             autocomplete="off"
             required
             class="search-bar"
+            id="user-input"
           />
           <input
             type="submit"
@@ -38,7 +41,7 @@
           />
         </form>
         <!--use JS to insert generated poem in this div-->
-        <div class="contents-section" id="poem-contents"></div>
+        <div class="contents-section hidden" id="poem-contents"></div>
       </main>
       <footer>
         <p>

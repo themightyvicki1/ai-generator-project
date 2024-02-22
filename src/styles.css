@@ -53,21 +53,23 @@ footer {
   margin-top: 30px;
 }
 
+/*the search / input bar */
 .search-bar {
   width: 80%;
-  padding: 12px;
-  border-radius: 10px;
+  padding: 15px;
+  border-radius: 20px;
   border: none;
   color: var(--text-color);
   font-size: 18px;
   background-color: var(--whitish-color);
 }
 
+/*the submit button */
 .submit-button {
   font-size: 18px;
-  padding: 12px;
+  padding: 15px;
   border: none;
-  border-radius: 10px;
+  border-radius: 20px;
   margin-left: 10px;
   color: var(--text-color);
   background-color: var(--whitish-color);
@@ -89,7 +91,7 @@ footer {
 .contents-section {
   background-color: var(--individual-div-color);
   border-left: 5px solid var(--additional-color);
-  box-shadow: 0px 10px 15px #5e280f;
+  box-shadow: 0px 10px 15px #e4aa63;
   border-radius: 3px;
   color: var(--text-color);
 }

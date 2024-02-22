@@ -12,13 +12,16 @@
       href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap"
       rel="stylesheet"
     />
+    <!--link for typewriter-->
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <title>AI Generator Project</title>
   </head>
   <body>
     <div class="container">
       <header><h1>AI Poem Generator</h1></header>
       <main>
-        <form class="contents-section">
+        <!--add id to form to be able to select it in JS-->
+        <form class="contents-section" id="search-bar-form">
           <input
             type="type"
             placeholder="Enter topic"
@@ -34,10 +37,8 @@
             class="submit-button"
           />
         </form>
-        <div class="contents-section" id="poem-contents">
-          Poem goes here<br />
-          More poem here
-        </div>
+        <!--use JS to insert generated poem in this div-->
+        <div class="contents-section" id="poem-contents"></div>
       </main>
       <footer>
         <p>

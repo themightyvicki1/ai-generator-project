@@ -41,7 +41,10 @@
           />
         </form>
         <!--use JS to insert generated poem in this div-->
-        <div class="contents-section hidden" id="poem-contents"></div>
+        <!--this will start hidden, after submit it'll show, but then once the api is called it'll be replaced with the poem-->
+        <div class="contents-section hidden" id="poem-contents">
+          Generating poem...
+        </div>
       </main>
       <footer>
         <p>

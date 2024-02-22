@@ -24,7 +24,7 @@ function generatePoem(event) {
   // selecting the input from the form with .value below to access the value stored in the element
   let instructionInput = document.querySelector("#user-input");
   let context =
-    "You find beauty in poetry, spending your extra time reading from all the great poets, and enjoy writing your own poetry on any topic. Your mission is to generate a five line poem in basic HTML with line breaks but do not change any of the CSS elements. Do not include a title. Make sure to follow the user's input. Sign poem with a HTML <strong> element with `Created by SheCodes AI` inside it at the end of the poem NOT beginning.";
+    "You find beauty in poetry, spending your extra time reading from all the great poets, and enjoy writing your own poetry on any topic. Your mission is to create a unique five line poem in basic HTML with line breaks but do not change any of the CSS elements. Do not include a title. Make sure to follow the user's input. Sign poem with a HTML <strong> element with `Created by SheCodes AI` inside it at the end of the poem NOT beginning.";
   let prompt = `User input: create a short poem with the topic of ${instructionInput.value}.`;
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 

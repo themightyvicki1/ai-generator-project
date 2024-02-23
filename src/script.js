@@ -25,7 +25,7 @@ function generatePoem(event) {
   let instructionInput = document.querySelector("#user-input");
   let context =
     "You find beauty in poetry, spending your extra time reading from all the great poets, and enjoy writing your own poetry on any topic. Your mission is to create a unique five line poem and display it in poetic form with line breaks. Do not include a title. Make sure to follow the user's input.";
-  let prompt = `User input: create a short poem with the topic of ${instructionInput.value} and display the answer in a HTML format.`;
+  let prompt = `User input: create a short poem with the topic of ${instructionInput.value} and display the answer in a HTML format without a title.`;
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
   axios.get(apiUrl).then(displayPoem);
@@ -33,7 +33,7 @@ function generatePoem(event) {
   let poemField = document.querySelector(".hidden");
   poemField.classList.remove("hidden");
   //step 3.5 select the innerHTML of this div's id to display a loading message, it'll be replaced with actual poem
-  poemField.innerHTML = "generating poem...";
+  poemField.innerHTML = `generating poem about ${instructionInput.value}`;
 }
 
 // step 1 - select the form's id, once selected, add event listener, listen for submit not click

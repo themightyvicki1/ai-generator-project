@@ -100,6 +100,7 @@ footer {
   padding: 20px 30px;
 }
 
+/*add this class to be able to hide the poem contents section, will remove later to view it */
 .hidden {
   display: none;
 }

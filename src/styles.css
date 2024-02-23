@@ -37,9 +37,7 @@ header h1 {
 }
 
 form {
-  padding: 30px;
   display: flex;
-  margin-bottom: 30px;
 }
 
 /*target all links */
@@ -98,11 +96,24 @@ footer {
 
 #poem-contents {
   font-size: 18px;
-  padding: 12px;
-  line-height: 2;
+  line-height: 1.5;
   padding: 20px 30px;
 }
 
 .hidden {
   display: none;
+}
+
+/*target the div wrapped around the entire form and hint */
+.form-container {
+  padding: 20px 30px;
+  margin-bottom: 30px;
+}
+
+/*target the hint that is stored in the form's container */
+.hint {
+  margin-top: 8px;
+  opacity: 0.6;
+  font-size: 12px;
+  margin-left: 8px;
 }

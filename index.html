@@ -22,29 +22,30 @@
     <div class="container">
       <header><h1>AI Poem Generator</h1></header>
       <main>
-        <!--add id to form to be able to select it in JS-->
-        <form class="contents-section" id="search-bar-form">
-          <input
-            type="type"
-            placeholder="Enter topic"
-            autofocus="on"
-            autocomplete="off"
-            required
-            class="search-bar"
-            id="user-input"
-          />
-          <input
-            type="submit"
-            title="Submit"
-            value="Submit"
-            class="submit-button"
-          />
-        </form>
+        <div class="form-container contents-section">
+          <!--add id to form to be able to select it in JS-->
+          <form id="search-bar-form">
+            <input
+              type="type"
+              placeholder="Enter poem topic"
+              autofocus="on"
+              autocomplete="off"
+              required
+              class="search-bar"
+              id="user-input"
+            />
+            <input
+              type="submit"
+              title="Submit"
+              value="Submit"
+              class="submit-button"
+            />
+          </form>
+          <div class="hint">example: flowers, pineapple, cheese, cats...</div>
+        </div>
         <!--use JS to insert generated poem in this div-->
         <!--this will start hidden, after submit it'll show, but then once the api is called it'll be replaced with the poem-->
-        <div class="contents-section hidden" id="poem-contents">
-          Generating poem...
-        </div>
+        <div class="contents-section hidden" id="poem-contents"></div>
       </main>
       <footer>
         <p>

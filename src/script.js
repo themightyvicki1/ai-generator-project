@@ -1,3 +1,6 @@
+const photosDisplayed = document.querySelector("#pexels-contents");
+let cardTag;
+
 //step 5 - function from axios call - receiving a response from axios
 function displayPoem(response) {
   console.log(response.data);
@@ -9,6 +12,15 @@ function displayPoem(response) {
     autoStart: true,
     delay: 1,
     cursor: "",
+  });
+}
+
+function getPhotos(images) {
+  images.map((image) => {
+    cardTag = `<div class="card">
+              <img src=${image.src.tiny} />
+         </div>`;
+    photosDisplayed.innerHTML += cardTag;
   });
 }
 
@@ -34,6 +46,23 @@ function generatePoem(event) {
   poemField.classList.remove("hidden");
   //step 3.5 select the innerHTML of this div's id to display a loading message, it'll be replaced with actual poem
   poemField.innerHTML = `generating poem about ${instructionInput.value}`;
+
+  //using fetch instead of axios call
+  fetch(
+    `https://api.pexels.com/v1/search?query=${instructionInput.value}&per_page=6`,
+    {
+      headers: {
+        Authorization:
+          "NaGQDyK82WUlaGzbKFRWYtgGDFvZNnEBEpSajlhzaJcpZrv2pIWO1dyX",
+      },
+    }
+  )
+    .then((resp) => {
+      return resp.json();
+    })
+    .then((data) => {
+      getPhotos(data.photos);
+    });
 }
 
 // step 1 - select the form's id, once selected, add event listener, listen for submit not click

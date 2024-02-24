@@ -94,10 +94,23 @@ footer {
   color: var(--text-color);
 }
 
+#pexels-contents {
+  padding: 20px 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+
+#pexels-contents img {
+  max-width: 75%;
+  margin-left: 20px;
+}
+
 #poem-contents {
   font-size: 18px;
   line-height: 1.5;
   padding: 20px 30px;
+  margin-bottom: 30px;
 }
 
 /*add this class to be able to hide the poem contents section, will remove later to view it */

@@ -15,14 +15,26 @@ function displayPoem(response) {
   });
 }
 
-function getPhotos(images) {
+// pexels function from axios call - receiving a response
+function handlePexelsResponse(response) {
+  console.log(response.data);
+
+  cardTag = `<div class="card">
+              <img src=${response.data.photos[0].src.original} />
+              <img src=${response.data.photos[1].src.original} />
+         </div>`;
+
+  photosDisplayed.innerHTML += cardTag;
+}
+
+/*function getPhotos(images) {
   images.map((image) => {
     cardTag = `<div class="card">
               <img src=${image.src.tiny} />
          </div>`;
     photosDisplayed.innerHTML += cardTag;
   });
-}
+}*/
 
 //step 2 - go to generatePoem function to make the api call
 //this function receives an event b/c event listener in step 1
@@ -47,8 +59,20 @@ function generatePoem(event) {
   //step 3.5 select the innerHTML of this div's id to display a loading message, it'll be replaced with actual poem
   poemField.innerHTML = `generating poem about ${instructionInput.value}`;
 
+  //pexels api key, url, and axios calls
+  let pexelsKey = "NaGQDyK82WUlaGzbKFRWYtgGDFvZNnEBEpSajlhzaJcpZrv2pIWO1dyX";
+
+  //used to authenticate api for images
+  let headers = {
+    "Content-Type": "application/json",
+    Authorization: pexelsKey,
+  };
+
+  let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${instructionInput.value}&per_page=6`;
+  axios.get(pexelsApiUrl, { headers }).then(handlePexelsResponse);
+
   //using fetch instead of axios call
-  fetch(
+  /*fetch(
     `https://api.pexels.com/v1/search?query=${instructionInput.value}&per_page=6`,
     {
       headers: {
@@ -62,7 +86,7 @@ function generatePoem(event) {
     })
     .then((data) => {
       getPhotos(data.photos);
-    });
+    });*/
 }
 
 // step 1 - select the form's id, once selected, add event listener, listen for submit not click

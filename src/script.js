@@ -1,5 +1,5 @@
-const photosDisplayed = document.querySelector("#pexels-contents");
-let cardTag;
+//const photosDisplayed = document.querySelector("#pexels-contents");
+//let cardTag;
 
 //step 5 - function from axios call - receiving a response from axios
 function displayPoem(response) {
@@ -16,7 +16,7 @@ function displayPoem(response) {
 }
 
 // pexels function from axios call - receiving a response
-function handlePexelsResponse(response) {
+/*function handlePexelsResponse(response) {
   console.log(response.data);
 
   cardTag = `<div class="card">
@@ -59,6 +59,7 @@ function generatePoem(event) {
   //step 3.5 select the innerHTML of this div's id to display a loading message, it'll be replaced with actual poem
   poemField.innerHTML = `generating poem about ${instructionInput.value}`;
 
+  /*
   //pexels api key, url, and axios calls
   let pexelsKey = "NaGQDyK82WUlaGzbKFRWYtgGDFvZNnEBEpSajlhzaJcpZrv2pIWO1dyX";
 
